@@ -14,7 +14,7 @@ public:
 	}
 };
 
-Hazel::Application* Hazel::CreateApplication()
+std::unique_ptr<Hazel::Application> Hazel::CreateApplication()
 {
-	return new Sandbox();
+	return std::make_unique<Sandbox>();
 }

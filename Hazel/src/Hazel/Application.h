@@ -2,6 +2,9 @@
 
 #include "Core.h"
 
+#include <stdio.h>
+#include <memory>
+
 namespace Hazel
 {
 	class HAZEL_API Application
@@ -13,5 +16,5 @@ namespace Hazel
 	};
 
 	//To Be defined by client
-	Application* CreateApplication();
+	std::unique_ptr<Application> CreateApplication();
 }
